@@ -33,11 +33,11 @@ DnaTranscriber.prototype.toRna = function(dnaStrand) {
 	}
 
 	result = '';
-	strandLength = 0;
+	strandLength = dnaStrand.length;
 	for ( i = 0 ; i < strandLength ; i++ ) {
-		result += this.translate(strandLength[i]);
+		result = result + this.translate(dnaStrand[i]);
 	}
-
+	return result;
 };
 
 module.exports = DnaTranscriber;
